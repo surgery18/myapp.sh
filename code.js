@@ -1,3 +1,4 @@
+//Get file to load
 fetch("projects.json")
   .then((response) => response.json())
   .then((projects) => {
