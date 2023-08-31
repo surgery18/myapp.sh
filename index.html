@@ -4,14 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Scott Deutsch's App Hub</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link id="dynamicStylesheet" rel="stylesheet" href="" />
 
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
 		/>
 
-		<script src="code.js" defer></script>
+		<script id="dynamicScript" src="" defer></script>
+
+		<script>
+		    document.addEventListener("DOMContentLoaded", function() {
+		        const styles = document.getElementById('dynamicStylesheet');
+		        const script = document.getElementById('dynamicScript');
+		        
+		        // Append current date as a query string for cache busting
+		        const cacheBuster = "?" + new Date().toISOString().slice(0,10); // YYYY-MM-DD format
+		        
+		        styles.href = "styles.css" + cacheBuster;
+		        script.src = "code.js" + cacheBuster;
+		    });
+		</script>
 	</head>
 
 	<body>
