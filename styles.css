@@ -126,3 +126,16 @@ footer a:hover {
   background-color: #3a3f46;
   /* Slightly lighter shade for hover */
 }
+
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {  /* This is a common breakpoint for tablets and below. Adjust if needed. */
+    .button-group {
+        flex-direction: column;  /* Stack the buttons vertically */
+        align-items: stretch;    /* Make buttons take the full width */
+    }
+
+    .button-group .button {
+        margin: 5px 0;  /* Add some vertical margin between buttons */
+    }
+}
