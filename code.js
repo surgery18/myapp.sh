@@ -20,7 +20,7 @@ fetch("projects.json")
       const projectURL =
         project.url && project.url.trim() !== ""
           ? project.url
-          : `${project.name}.myapp.sh`
+          : `https://${project.name}.myapp.sh`
 
       const projectLink = document.createElement("button")
       projectLink.className = "button button-primary"
