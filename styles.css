@@ -127,6 +127,11 @@ footer a:hover {
   /* Slightly lighter shade for hover */
 }
 
+#site-logo {
+    height: 50px; /* Adjust this value according to your preference */
+    width: auto; /* This will maintain the aspect ratio of the logo */
+    margin-right: 20px; /* Optional: Add some spacing if needed */
+}
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {  /* This is a common breakpoint for tablets and below. Adjust if needed. */
