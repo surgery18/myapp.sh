@@ -128,9 +128,8 @@ footer a:hover {
 }
 
 #site-logo {
-    height: 50px; /* Adjust this value according to your preference */
+    height: 150px; /* Adjust this value according to your preference */
     width: auto; /* This will maintain the aspect ratio of the logo */
-    margin-right: 20px; /* Optional: Add some spacing if needed */
 }
 
 /* Mobile view adjustments */
