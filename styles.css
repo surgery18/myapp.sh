@@ -1,145 +1,147 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
 }
 
 main {
-  padding: 20px;
+	padding: 20px;
 }
 
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* Center-align the project cards */
-  gap: 20px;
+#projects,
+#non-gh-projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* Center-align the project cards */
+	gap: 20px;
 }
 
-#projects .project {
-  flex: 1 0 calc(50% - 10px);
-  /* Make the item grow and set a base width */
-  max-width: calc(50% - 10px);
-  /* Maximum width it can occupy */
-  box-sizing: border-box;
-  background-color: #fff;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+.project {
+	flex: 1 0 calc(50% - 10px);
+	/* Make the item grow and set a base width */
+	max-width: calc(50% - 10px);
+	/* Maximum width it can occupy */
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 15px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
 }
 
-#projects .project h3 {
-  margin-top: 0;
-  flex: 1;
+.project h3 {
+	margin-top: 0;
+	flex: 1;
 }
 
-#projects .project p {
-  flex: 2;
+.project p {
+	flex: 2;
 }
 
 .button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
 }
 
 .button-primary {
-  background-color: #007bff;
-  color: #fff;
+	background-color: #007bff;
+	color: #fff;
 }
 
 .button-success {
-  background-color: #28a745;
-  color: #fff;
+	background-color: #28a745;
+	color: #fff;
 }
 
 .button-group {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
 }
 
 footer a {
-  color: #ffd700;
-  text-decoration: none;
+	color: #ffd700;
+	text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 #socials {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
 }
 
 #socials a {
-  font-size: 24px;
-  /* Adjust size as needed */
-  color: #ffd700;
-  text-decoration: none;
+	font-size: 24px;
+	/* Adjust size as needed */
+	color: #ffd700;
+	text-decoration: none;
 }
 
 #socials a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 #more-projects {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .github-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #24292e;
-  /* GitHub's color */
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #24292e;
+	/* GitHub's color */
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
 }
 
 .github-button:hover {
-  background-color: #3a3f46;
-  /* Slightly lighter shade for hover */
+	background-color: #3a3f46;
+	/* Slightly lighter shade for hover */
 }
 
 #site-logo {
-    height: 150px; /* Adjust this value according to your preference */
-    width: auto; /* This will maintain the aspect ratio of the logo */
+	height: 150px; /* Adjust this value according to your preference */
+	width: auto; /* This will maintain the aspect ratio of the logo */
 }
 
 /* Mobile view adjustments */
-@media (max-width: 768px) {  /* This is a common breakpoint for tablets and below. Adjust if needed. */
-    .button-group {
-        flex-direction: column;  /* Stack the buttons vertically */
-        align-items: stretch;    /* Make buttons take the full width */
-    }
+@media (max-width: 768px) {
+	/* This is a common breakpoint for tablets and below. Adjust if needed. */
+	.button-group {
+		flex-direction: column; /* Stack the buttons vertically */
+		align-items: stretch; /* Make buttons take the full width */
+	}
 
-    .button-group .button {
-        margin: 5px 0;  /* Add some vertical margin between buttons */
-    }
+	.button-group .button {
+		margin: 5px 0; /* Add some vertical margin between buttons */
+	}
 }
