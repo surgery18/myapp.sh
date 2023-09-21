@@ -1,0 +1,12 @@
+[
+	{
+		"name": "IWill.fund",
+		"description": "A crowdfunding platform like kickstarter or gofundme but on the blockchain. Currently on the testnet.",
+		"url": "https://iwill.fund"
+	},
+	{
+		"name": "Life Skills Winner",
+		"description": "An app that teaches social and life Skills to autistic and special needs individuals. Please note since this app is very old, it no longer can connect to mysql due to incompatiblity to the gems in ruby of rails. So it is using SQLite and does get reset.",
+		"url": "https://app.lifeskillswinner.com"
+	}
+]
