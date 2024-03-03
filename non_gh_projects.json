@@ -1,5 +1,10 @@
 [
 	{
+		"name": "DietDiary",
+		"description": "A food tracker app that uses AI",
+		"url": "https://dietdiary.myapp.sh"
+	},
+	{
 		"name": "IWill.fund",
 		"description": "A crowdfunding platform like kickstarter or gofundme but on the blockchain. Currently on the testnet.",
 		"url": "https://test.iwill.fund"
