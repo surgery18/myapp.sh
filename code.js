@@ -1,23 +1,21 @@
-//Get file to load
+// Fetch and display GitHub projects
 fetch("projects.json")
 	.then((response) => response.json())
 	.then((projects) => {
 		const projectsElement = document.getElementById("projects")
 
 		projects.forEach(async (project) => {
-			// Use async here as we'll await fetching description
 			const projectElement = document.createElement("div")
 			projectElement.className = "project"
 
 			const projectName = document.createElement("h3")
 			projectName.textContent = project.name
 
-			let projectDescriptionText = project.description || "Loading..." // Default to "Loading..."
+			let projectDescriptionText = project.description || "Loading..."
 
 			const projectDescription = document.createElement("p")
 			projectDescription.textContent = projectDescriptionText
 
-			// Check if the URL is defined or not empty, otherwise use the default structure
 			const projectURL =
 				project.url && project.url.trim() !== ""
 					? project.url
@@ -45,7 +43,7 @@ fetch("projects.json")
 
 			projectsElement.appendChild(projectElement)
 
-			// If the description is "Loading...", fetch from GitHub
+			// Fetch description from GitHub if not provided
 			if (projectDescriptionText === "Loading...") {
 				try {
 					const repoResponse = await fetch(
@@ -70,6 +68,7 @@ fetch("projects.json")
 		console.error("Error fetching projects:", error)
 	})
 
+// Fetch and display non-GitHub projects
 fetch("non_gh_projects.json")
 	.then((response) => response.json())
 	.then((projects) => {
@@ -85,7 +84,6 @@ fetch("non_gh_projects.json")
 			const projectDescription = document.createElement("p")
 			projectDescription.textContent = project.description
 
-			// Check if the URL is defined or not empty, otherwise use the default structure
 			const projectURL =
 				project.url && project.url.trim() !== ""
 					? project.url
@@ -107,4 +105,54 @@ fetch("non_gh_projects.json")
 		console.error("Error fetching non-GitHub projects:", error)
 	})
 
+// Fetch and display videos
+fetch("videos.json")
+	.then((response) => response.json())
+	.then((videos) => {
+		const videosElement = document.getElementById("videos")
+
+		videos.forEach((video) => {
+			const videoElement = document.createElement("div")
+			videoElement.className = "video"
+
+			const videoTitle = document.createElement("h3")
+			videoTitle.textContent = video.title
+			videoElement.appendChild(videoTitle)
+
+			if (video.description) {
+				const videoDescription = document.createElement("p")
+				videoDescription.textContent = video.description
+				videoElement.appendChild(videoDescription)
+			}
+
+			let embedUrl = video.url
+
+			// Convert YouTube URLs to embed format
+			const youtubeRegex =
+				/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/
+
+			const match = video.url.match(youtubeRegex)
+			if (match && match[1]) {
+				const videoId = match[1]
+				embedUrl = `https://www.youtube.com/embed/${videoId}`
+			}
+
+			const iframe = document.createElement("iframe")
+			iframe.src = embedUrl
+			iframe.width = "560"
+			iframe.height = "315"
+			iframe.frameBorder = "0"
+			iframe.allow =
+				"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			iframe.allowFullscreen = true
+
+			videoElement.appendChild(iframe)
+			videosElement.appendChild(videoElement)
+		})
+	})
+	.catch((error) => {
+		console.error("Error fetching videos:", error)
+	})
+
+// Update copyright year
 document.getElementById("copyright-year").textContent = new Date().getFullYear()

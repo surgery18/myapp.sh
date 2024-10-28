@@ -1,10 +1,22 @@
+/* General Styles */
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #f5f5f5;
+	background-color: #f8f9fa;
+	color: #212529;
 }
 
+a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
 header {
 	background-color: #333;
 	color: #fff;
@@ -12,47 +24,67 @@ header {
 	text-align: center;
 }
 
+header h1 {
+	margin: 10px 0;
+}
+
+header p {
+	margin: 0;
+}
+
+/* Main Content */
 main {
 	padding: 20px;
 }
 
+main h2 {
+	margin-top: 40px;
+	color: #007bff;
+	border-bottom: 2px solid #007bff;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
 #projects,
-#non-gh-projects {
+#non-gh-projects,
+#videos {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	/* Center-align the project cards */
 	gap: 20px;
 }
 
-.project {
-	flex: 1 0 calc(50% - 10px);
-	/* Make the item grow and set a base width */
-	max-width: calc(50% - 10px);
-	/* Maximum width it can occupy */
-	box-sizing: border-box;
+.project,
+.video {
 	background-color: #fff;
+	flex: 1 0 calc(45% - 10px);
+	max-width: calc(45% - 10px);
+	box-sizing: border-box;
 	padding: 15px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
+	border: 1px solid #dee2e6;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.project h3 {
+.project h3,
+.video h3 {
 	margin-top: 0;
-	flex: 1;
+	color: #007bff;
 }
 
-.project p {
-	flex: 2;
+.project p,
+.video p {
+	margin: 10px 0;
 }
 
+/* Buttons */
 .button {
 	padding: 10px 15px;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
 	margin-right: 10px;
+	font-weight: bold;
 }
 
 .button-primary {
@@ -60,62 +92,27 @@ main {
 	color: #fff;
 }
 
+.button-primary:hover {
+	background-color: #0056b3;
+}
+
 .button-success {
 	background-color: #28a745;
 	color: #fff;
+}
+
+.button-success:hover {
+	background-color: #1e7e34;
 }
 
 .button-group {
 	margin-top: 10px;
 }
 
-footer {
-	background-color: #333;
-	color: #fff;
-	text-align: center;
-	padding: 10px 0;
-}
-
-footer a {
-	color: #ffd700;
-	text-decoration: none;
-}
-
-footer a:hover {
-	text-decoration: underline;
-}
-
-#socials {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
-}
-
-#socials a {
-	font-size: 24px;
-	/* Adjust size as needed */
-	color: #ffd700;
-	text-decoration: none;
-}
-
-#socials a:hover {
-	text-decoration: underline;
-}
-
-#more-projects {
-	text-align: center;
-	margin-top: 40px;
-	padding: 20px;
-	background-color: #f7f7f7;
-	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
 .github-button {
 	display: inline-block;
 	padding: 10px 20px;
 	background-color: #24292e;
-	/* GitHub's color */
 	color: #fff;
 	border-radius: 5px;
 	text-decoration: none;
@@ -125,23 +122,75 @@ footer a:hover {
 
 .github-button:hover {
 	background-color: #3a3f46;
-	/* Slightly lighter shade for hover */
+}
+
+/* Video iframe */
+.video iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+	border: none;
+	border-radius: 5px;
+}
+
+/* Footer */
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+}
+
+footer p {
+	margin: 5px 0;
+}
+
+#socials {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin: 10px 0;
+}
+
+#socials a {
+	font-size: 24px;
+	color: #adb5bd;
+}
+
+#socials a:hover {
+	color: #fff;
+}
+
+/* More Projects Section */
+#more-projects {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px;
+	background-color: #e9ecef;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 #site-logo {
-	height: 150px; /* Adjust this value according to your preference */
-	width: auto; /* This will maintain the aspect ratio of the logo */
+	height: 150px;
+	width: auto;
 }
 
-/* Mobile view adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
-	/* This is a common breakpoint for tablets and below. Adjust if needed. */
+	.project,
+	.video {
+		flex: 1 0 100%;
+		max-width: 100%;
+	}
+
 	.button-group {
-		flex-direction: column; /* Stack the buttons vertically */
-		align-items: stretch; /* Make buttons take the full width */
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
 	}
 
 	.button-group .button {
-		margin: 5px 0; /* Add some vertical margin between buttons */
+		margin: 5px 0;
 	}
 }
