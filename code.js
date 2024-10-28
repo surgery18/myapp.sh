@@ -105,7 +105,7 @@ fetch("non_gh_projects.json")
 		console.error("Error fetching non-GitHub projects:", error)
 	})
 
-// Fetch and display videos
+// Fetch and display videos using <video> tag
 fetch("videos.json")
 	.then((response) => response.json())
 	.then((videos) => {
@@ -125,28 +125,18 @@ fetch("videos.json")
 				videoElement.appendChild(videoDescription)
 			}
 
-			let embedUrl = video.url
+			const videoTag = document.createElement("video")
+			videoTag.controls = true
+			videoTag.width = 560
+			videoTag.height = 315
 
-			// Convert YouTube URLs to embed format
-			const youtubeRegex =
-				/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/
+			// Create source element
+			const source = document.createElement("source")
+			source.src = video.url
+			source.type = video.type || "video/mp4" // Default to mp4 if type not specified
 
-			const match = video.url.match(youtubeRegex)
-			if (match && match[1]) {
-				const videoId = match[1]
-				embedUrl = `https://www.youtube.com/embed/${videoId}`
-			}
-
-			const iframe = document.createElement("iframe")
-			iframe.src = embedUrl
-			iframe.width = "560"
-			iframe.height = "315"
-			iframe.frameBorder = "0"
-			iframe.allow =
-				"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-			iframe.allowFullscreen = true
-
-			videoElement.appendChild(iframe)
+			videoTag.appendChild(source)
+			videoElement.appendChild(videoTag)
 			videosElement.appendChild(videoElement)
 		})
 	})

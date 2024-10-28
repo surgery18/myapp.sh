@@ -124,13 +124,14 @@ main h2 {
 	background-color: #3a3f46;
 }
 
-/* Video iframe */
-.video iframe {
+/* Video tag styling */
+.video video {
 	width: 100%;
+	max-height: 300px;
 	height: auto;
-	aspect-ratio: 16/9;
 	border: none;
 	border-radius: 5px;
+	margin-top: 10px;
 }
 
 /* Footer */
