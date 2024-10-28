@@ -105,7 +105,7 @@ fetch("non_gh_projects.json")
 		console.error("Error fetching non-GitHub projects:", error)
 	})
 
-// Fetch and display videos using <video> tag
+// Fetch and display videos
 fetch("videos.json")
 	.then((response) => response.json())
 	.then((videos) => {
@@ -125,18 +125,40 @@ fetch("videos.json")
 				videoElement.appendChild(videoDescription)
 			}
 
-			const videoTag = document.createElement("video")
-			videoTag.controls = true
-			videoTag.width = 560
-			videoTag.height = 315
+			const youtubeRegex =
+				/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/
 
-			// Create source element
-			const source = document.createElement("source")
-			source.src = video.url
-			source.type = video.type || "video/mp4" // Default to mp4 if type not specified
+			const match = video.url.match(youtubeRegex)
+			if (match && match[1]) {
+				// It's a YouTube URL
+				const videoId = match[1]
+				const embedUrl = `https://www.youtube.com/embed/${videoId}`
 
-			videoTag.appendChild(source)
-			videoElement.appendChild(videoTag)
+				const iframe = document.createElement("iframe")
+				iframe.src = embedUrl
+				iframe.width = "560"
+				iframe.height = "315"
+				iframe.frameBorder = "0"
+				iframe.allow =
+					"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				iframe.allowFullscreen = true
+
+				videoElement.appendChild(iframe)
+			} else {
+				// Not a YouTube URL, use <video> tag
+				const videoTag = document.createElement("video")
+				videoTag.controls = true
+				videoTag.width = 560
+				videoTag.height = 315
+
+				const source = document.createElement("source")
+				source.src = video.url
+				source.type = video.type || "video/mp4" // Default to mp4 if type not specified
+
+				videoTag.appendChild(source)
+				videoElement.appendChild(videoTag)
+			}
+
 			videosElement.appendChild(videoElement)
 		})
 	})

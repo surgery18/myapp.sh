@@ -134,6 +134,14 @@ main h2 {
 	margin-top: 10px;
 }
 
+.video iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+	border: none;
+	border-radius: 5px;
+}
+
 /* Footer */
 footer {
 	background-color: #333;
