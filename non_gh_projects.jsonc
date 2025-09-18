@@ -1,0 +1,20 @@
+[
+  {
+    "name": "GrubVision",
+    "description": "A food tracker app that uses AI",
+    "url": "https://grubvision.com",
+    "tags": ["AI", "Health"]
+  },
+  {
+    "name": "IWill.fund",
+    "description": "A crowdfunding platform like Kickstarter or GoFundMe but on the blockchain. Currently on the testnet.",
+    "url": "https://test.iwill.fund",
+    "tags": ["Blockchain", "DeFi"]
+  },
+  {
+    "name": "Life Skills Winner",
+    "description": "An app that teaches social and life skills to autistic and special needs individuals. Legacy build now runs on SQLite for demo access.",
+    "url": "https://app.lifeskillswinner.com",
+    "tags": ["Other", "Education"]
+  }
+]

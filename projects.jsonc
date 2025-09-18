@@ -1,0 +1,53 @@
+[
+	{
+		"name": "cloudflare-md2pdf",
+		"tags": ["Cloudflare", "Utility"]
+	},
+	{
+		"name": "tornado-sim",
+		"tags": ["Gemini 2.5 Pro", "Simulation"],
+		"description": "A simple tornado simulation test"
+	},
+	{
+		"name": "chrome-media-speed-controller",
+		"tags": ["Chrome Extenstion", "Utility"],
+		"description": "A plugin to allow you to control the speed of the current video playing."
+	},
+	{
+		"name": "monstermon",
+		"tags": ["AI", "Card Game"]
+	},
+	{
+		"name": "TinyBlock",
+		"url": "https://tbk.wtf",
+		"tags": ["Blockchain"]
+	},
+	{
+		"name": "HouseReAIze",
+		"tags": ["AI"]
+	},
+	{
+		"name": "Liquidip",
+		"tags": ["Blockchain", "DeFi"]
+	},
+	{
+		"name": "survana",
+		"tags": ["Blockchain"]
+	},
+	{
+		"name": "staker-demo",
+		"tags": ["Blockchain", "DeFi"]
+	},
+	{
+		"name": "swap-thang",
+		"tags": ["Blockchain", "DeFi"]
+	}
+	// {
+	// 	"name": "SCP-294-GPT",
+	// 	"tags": ["AI", "Simulation"]
+	// },
+	// {
+	// 	"name": "ant-sim-gpt-4",
+	// 	"tags": ["AI", "Simulation"]
+	// }
+]
