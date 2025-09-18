@@ -1,3 +1,7 @@
+html {
+	background-color: #01020f;
+}
+
 :root {
 	--color-bg: #01020f;
 	--color-bg-alt: #051132;
@@ -28,6 +32,7 @@ body {
 	padding: 0;
 	min-height: 100vh;
 	font-family: "Space Grotesk", Arial, sans-serif;
+	background-color: #01020f;
 	background: radial-gradient(circle at 20% 15%, rgba(0, 180, 255, 0.28), transparent 50%),
 		radial-gradient(circle at 80% 10%, rgba(120, 80, 255, 0.32), transparent 55%),
 		linear-gradient(180deg, var(--color-bg) 0%, #020925 65%, #000510 100%);
@@ -120,6 +125,17 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	filter: drop-shadow(0 0 40px rgba(0, 245, 255, 0.35));
+}
+
+
+.background-grid,
+.background-grid::before,
+.background-grid::after,
+.background-aurora,
+.background-ai {
+	backface-visibility: hidden;
+	will-change: transform, opacity;
+	transform: translateZ(0);
 }
 
 @keyframes star-drift {
@@ -683,6 +699,26 @@ footer {
 		padding: 24px 20px 56px;
 	}
 
+	.background-grid::before,
+	.background-grid::after {
+		animation: none;
+	}
+	.background-grid::after {
+		transform: none;
+		height: 120%;
+		bottom: -10%;
+		opacity: 0.25;
+	}
+	.background-aurora {
+		animation: none;
+		inset: -40% -35% auto;
+		height: 120%;
+		filter: blur(30px);
+	}
+	.background-ai {
+		animation: none;
+	}
+
 	.filter-bar {
 		flex-direction: column;
 		align-items: stretch;
@@ -727,3 +763,4 @@ footer {
 	width: 1em;
 	height: 1em;
 }
+
