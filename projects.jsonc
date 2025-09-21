@@ -1,7 +1,8 @@
 [
 	{
 		"name": "track-my-shows",
-		"tags": ["BY-AI", "Lovable", "TV"]
+		"tags": ["BY-AI", "Lovable", "TV"],
+		"description": "A simple app to track your favorite TV shows"
 	},
 	{
 		"name": "cloudflare-md2pdf",
