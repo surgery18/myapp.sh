@@ -1,5 +1,9 @@
 [
 	{
+		"name": "track-my-shows",
+		"tags": ["BY-AI", "Lovable", "TV"]
+	},
+	{
 		"name": "cloudflare-md2pdf",
 		"tags": ["Cloudflare", "Utility"]
 	},
@@ -15,7 +19,7 @@
 	},
 	{
 		"name": "monstermon",
-		"tags": ["AI", "Card Game"]
+		"tags": ["BY-AI", "Card Game"]
 	},
 	{
 		"name": "TinyBlock",
