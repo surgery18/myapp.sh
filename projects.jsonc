@@ -1,26 +1,31 @@
 [
 	{
 		"name": "cf-pages-functions-loader-hono",
-		"tags": ["Hono", "Cloudflare", "Server"]
+		"tags": ["Hono", "Cloudflare", "Server"],
+		"url": "#"
 	},
 	{
 		"name": "track-my-shows",
 		"tags": ["BY-AI", "Lovable", "TV"],
-		"description": "A simple app to track your favorite TV shows"
+		"description": "A simple app to track your favorite TV shows",
+		"url": "https://track-my-shows.lovable.app"
 	},
 	{
 		"name": "cloudflare-md2pdf",
-		"tags": ["Cloudflare", "Utility"]
+		"tags": ["Cloudflare", "Utility"],
+		"url": "#"
 	},
 	{
 		"name": "tornado-sim",
 		"tags": ["Gemini 2.5 Pro", "Simulation"],
-		"description": "A simple tornado simulation test"
+		"description": "A simple tornado simulation test",
+		"url": "#"
 	},
 	{
 		"name": "chrome-media-speed-controller",
 		"tags": ["Chrome Extenstion", "Utility"],
-		"description": "A plugin to allow you to control the speed of the current video playing."
+		"description": "A plugin to allow you to control the speed of the current video playing.",
+		"url": "#"
 	},
 	{
 		"name": "monstermon",
