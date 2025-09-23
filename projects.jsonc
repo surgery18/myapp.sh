@@ -1,5 +1,9 @@
 [
 	{
+		"name": "cf-pages-functions-loader-hono",
+		"tags": ["Hono", "Cloudflare", "Server"]
+	},
+	{
 		"name": "track-my-shows",
 		"tags": ["BY-AI", "Lovable", "TV"],
 		"description": "A simple app to track your favorite TV shows"
