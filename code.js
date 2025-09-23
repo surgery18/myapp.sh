@@ -329,19 +329,25 @@ loadJsonc("projects.jsonc")
 			const projectDescription = document.createElement("p")
 			projectDescription.textContent = projectDescriptionText
 
-			const projectURL =
-				project.url && project.url.trim() !== ""
-					? project.url
-					: "https://" + project.name + ".myapp.sh"
+			const buttonGroup = document.createElement("div")
+			buttonGroup.className = "button-group"
 
-			const projectLink = document.createElement("button")
-			projectLink.className = "button button-primary"
-			projectLink.onclick = () => window.open(projectURL, "_blank")
-			projectLink.textContent = "Launch"
-			projectLink.setAttribute(
-				"aria-label",
-				"Open " + project.name + " project"
-			)
+			if (project.url !== "#") {
+				const projectURL =
+					project.url && project.url.trim() !== ""
+						? project.url
+						: "https://" + project.name + ".myapp.sh"
+
+				const projectLink = document.createElement("button")
+				projectLink.className = "button button-primary"
+				projectLink.onclick = () => window.open(projectURL, "_blank")
+				projectLink.textContent = "Launch"
+				projectLink.setAttribute(
+					"aria-label",
+					"Open " + project.name + " project"
+				)
+				buttonGroup.appendChild(projectLink)
+			}
 
 			const codeURL = "https://github.com/surgery18/" + project.name
 			const codeLink = document.createElement("button")
@@ -350,9 +356,6 @@ loadJsonc("projects.jsonc")
 			codeLink.textContent = "View Code"
 			codeLink.setAttribute("aria-label", "View " + project.name + " on GitHub")
 
-			const buttonGroup = document.createElement("div")
-			buttonGroup.className = "button-group"
-			buttonGroup.appendChild(projectLink)
 			buttonGroup.appendChild(codeLink)
 
 			projectElement.appendChild(projectName)
