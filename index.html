@@ -1,151 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta
-		name="description"
-		content="Scott Deutsch's immersive technology hub featuring VR adventures, AI experiments, and blockchain-powered builds." />
-	<title>Scott Deutsch | Personal Projects</title>
-	<link id="dynamicStylesheet" rel="stylesheet" href="styles.css?v=8" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet" />
-	<script id="dynamicScript" src="code.js?v=7" defer></script>
-	<link rel="icon" type="image/x-icon" href="./favicon.png" />
-</head>
-<body>
-	<div class="background-grid" aria-hidden="true"></div>
-	<div class="background-aurora" aria-hidden="true"></div>
-	<div class="background-ai" aria-hidden="true">
-		<svg viewBox="0 0 420 420" role="presentation">
-			<defs>
-				<radialGradient id="ai-core" cx="50%" cy="50%" r="50%">
-					<stop offset="0%" stop-color="#00f5ff" stop-opacity="0.8" />
-					<stop offset="50%" stop-color="#8f74ff" stop-opacity="0.4" />
-					<stop offset="100%" stop-color="#020616" stop-opacity="0" />
-				</radialGradient>
-				<linearGradient id="ai-link" x1="0%" y1="0%" x2="100%" y2="100%">
-					<stop offset="0%" stop-color="#00f5ff" />
-					<stop offset="100%" stop-color="#9a6bff" />
-				</linearGradient>
-			</defs>
-			<circle cx="210" cy="210" r="180" fill="url(#ai-core)" />
-			<g stroke="url(#ai-link)" stroke-width="1.5" fill="none" opacity="0.45">
-				<path d="M70 120 Q210 60 350 120" />
-				<path d="M90 220 Q210 160 330 210" />
-				<path d="M120 320 Q210 280 300 320" />
-			</g>
-			<g fill="#00f5ff" opacity="0.85">
-				<circle cx="210" cy="210" r="18" />
-				<circle cx="110" cy="130" r="8" />
-				<circle cx="310" cy="130" r="9" />
-				<circle cx="140" cy="310" r="7" />
-				<circle cx="280" cy="300" r="6" />
-				<circle cx="100" cy="220" r="6" />
-				<circle cx="320" cy="220" r="7" />
-			</g>
-			<g stroke="url(#ai-link)" stroke-width="2" opacity="0.55">
-				<line x1="210" y1="210" x2="110" y2="130" />
-				<line x1="210" y1="210" x2="310" y2="130" />
-				<line x1="210" y1="210" x2="140" y2="310" />
-				<line x1="210" y1="210" x2="280" y2="300" />
-				<line x1="210" y1="210" x2="100" y2="220" />
-				<line x1="210" y1="210" x2="320" y2="220" />
-			</g>
-		</svg>
-	</div>
-
-	<header class="site-header">
-		<div class="brand-block">
-			<a href="/" class="logo-link">
-				<img src="./logo.png?v=2" alt="MyApp.sh logo" id="site-logo" />
-			</a>
-			<div class="brand-copy">
-				<span class="brand-tag">MyApp.sh</span>
-				<h1>Scott Deutsch</h1>
-				<p>Personal Projects</p>
-			</div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Scott Deutsch's immersive technology hub featuring VR adventures, AI experiments, and blockchain-powered builds." />
+		<title>Scott Deutsch | Personal Projects</title>
+		<link id="dynamicStylesheet" rel="stylesheet" href="styles.css?v=8" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap"
+			rel="stylesheet" />
+		<script id="dynamicScript" src="code.js?v=7" defer></script>
+		<link rel="icon" type="image/x-icon" href="./favicon.png" />
+	</head>
+	<body>
+		<div class="background-grid" aria-hidden="true"></div>
+		<div class="background-aurora" aria-hidden="true"></div>
+		<div class="background-ai" aria-hidden="true">
+			<svg viewBox="0 0 420 420" role="presentation">
+				<defs>
+					<radialGradient id="ai-core" cx="50%" cy="50%" r="50%">
+						<stop offset="0%" stop-color="#00f5ff" stop-opacity="0.8" />
+						<stop offset="50%" stop-color="#8f74ff" stop-opacity="0.4" />
+						<stop offset="100%" stop-color="#020616" stop-opacity="0" />
+					</radialGradient>
+					<linearGradient id="ai-link" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="0%" stop-color="#00f5ff" />
+						<stop offset="100%" stop-color="#9a6bff" />
+					</linearGradient>
+				</defs>
+				<circle cx="210" cy="210" r="180" fill="url(#ai-core)" />
+				<g stroke="url(#ai-link)" stroke-width="1.5" fill="none" opacity="0.45">
+					<path d="M70 120 Q210 60 350 120" />
+					<path d="M90 220 Q210 160 330 210" />
+					<path d="M120 320 Q210 280 300 320" />
+				</g>
+				<g fill="#00f5ff" opacity="0.85">
+					<circle cx="210" cy="210" r="18" />
+					<circle cx="110" cy="130" r="8" />
+					<circle cx="310" cy="130" r="9" />
+					<circle cx="140" cy="310" r="7" />
+					<circle cx="280" cy="300" r="6" />
+					<circle cx="100" cy="220" r="6" />
+					<circle cx="320" cy="220" r="7" />
+				</g>
+				<g stroke="url(#ai-link)" stroke-width="2" opacity="0.55">
+					<line x1="210" y1="210" x2="110" y2="130" />
+					<line x1="210" y1="210" x2="310" y2="130" />
+					<line x1="210" y1="210" x2="140" y2="310" />
+					<line x1="210" y1="210" x2="280" y2="300" />
+					<line x1="210" y1="210" x2="100" y2="220" />
+					<line x1="210" y1="210" x2="320" y2="220" />
+				</g>
+			</svg>
 		</div>
-		<nav class="site-nav" aria-label="Primary Navigation">
-			<a href="#videos">Resume Reels</a>
-			<a href="#projects">Projects</a>
-			<a href="#non-gh-projects">Labs</a>
-			<a href="#connect">Connect</a>
-		</nav>
-	</header>
 
-	<section class="hero">
-		<div class="hero-copy">
-			<span class="hero-kicker">VR • AI • BLOCKCHAIN</span>
-			<h2>A living hub for my experiments, demos, and open-source.</h2>
-			<p>
-				From on-chain joys and smart-contract demos to AI-generated shows and tiny VR ideas —
-				this page collects the projects I tinker on. Use the filters to jump around.
-				Press <kbd>/</kbd> to search.
-			</p>
-			<div class="hero-actions">
-				<a href="#projects" class="cta primary">Browse Projects</a>
-				<a href="#videos" class="cta secondary">Watch Resume Reels</a>
-			</div>
-		</div>
-	</section>
-
-	<main>
-		<section class="content-section" id="videos-section">
-			<header class="section-header">
-				<h2>Resume Video Capsules</h2>
-				<p>Quick-hit career reels blending storytelling with in-headset capture.</p>
-			</header>
-			<div class="card-grid" id="videos"></div>
-		</section>
-
-		<section class="content-section" id="projects-section">
-			<header class="section-header">
-				<h2>Interactive Project Atlas</h2>
-				<p>Filter across AI, blockchain, and experimental builds to find your next spark.</p>
-			</header>
-			<div class="filter-bar" role="group" aria-label="Project filters">
-				<div class="filter-search">
-					<label for="project-search" class="sr-only">Search projects</label>
-					<input type="search" id="project-search" placeholder="Search by name or description" autocomplete="off" />
-				</div>
-				<div class="filter-chips" id="filter-chips">
-					<button class="filter-chip active" data-filter="all" type="button">All</button>
+		<header class="site-header">
+			<div class="brand-block">
+				<a href="/" class="logo-link">
+					<img src="./logo.png?v=2" alt="MyApp.sh logo" id="site-logo" />
+				</a>
+				<div class="brand-copy">
+					<span class="brand-tag">MyApp.sh</span>
+					<h1>Scott Deutsch</h1>
+					<p>Personal Projects</p>
 				</div>
 			</div>
-			<div class="card-grid" id="projects"></div>
-		</section>
+			<nav class="site-nav" aria-label="Primary Navigation">
+				<a href="#videos">Resume Reels</a>
+				<a href="#projects">Projects</a>
+				<a href="#non-gh-projects">Labs</a>
+				<a href="#connect">Connect</a>
+			</nav>
+		</header>
 
-		<section class="content-section" id="non-gh-section">
-			<header class="section-header">
-				<h2>Extended Reality Labs</h2>
+		<section class="hero">
+			<div class="hero-copy">
+				<span class="hero-kicker">VR • AI • BLOCKCHAIN</span>
+				<h2>A living hub for my experiments, demos, and open-source.</h2>
 				<p>
-					Selected client and concept work hosted beyond GitHub, ready for deep dives.
+					From on-chain joys and smart-contract demos to AI-generated shows and
+					tiny VR ideas — this page collects the projects I tinker on. Use the
+					filters to jump around. Press <kbd>/</kbd> to search.
 				</p>
-			</header>
-			<div class="card-grid" id="non-gh-projects"></div>
-		</section>
-	</main>
-
-	<section id="more-projects" class="callout">
-		<h2>Explore more experiments</h2>
-		<p>Follow the full stream of personal builds, prototypes, and repos.</p>
-		<a href="https://github.com/surgery18?tab=repositories" target="_blank" class="github-button">Visit GitHub</a>
-	</section>
-
-	<footer id="connect">
-		<div class="footer-inner">
-			<p>Send me a friend request on any of these worlds.</p>
-			<div id="socials" aria-label="Social media">
-				<a href="https://github.com/surgery18" target="_blank" title="GitHub: surgery18"><i class="fab fa-github"></i></a>
-				<a href="https://twitter.com/TheVRNerd" target="_blank" title="X: @TheVRNerd"><svg class="icon-x" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h4.6l4.35 6.42L16.88 3H21l-7.58 9.7L21 21h-4.6l-4.5-6.63L7.12 21H3l7.63-9.83L3 3z"/></svg><span class="sr-only">X</span></a>
-				<a href="https://www.tiktok.com/@sdeutsch18" target="_blank" title="TikTok: @sdeutsch18"><i class="fab fa-tiktok"></i></a>
-				<a href="https://www.linkedin.com/in/sdeutsch" target="_blank" title="LinkedIn: sdeutsch"><i class="fab fa-linkedin"></i></a>
-				<a href="https://www.instagram.com/sdeutsch18" target="_blank" title="Instagram: sdeutsch18"><i class="fab fa-instagram"></i></a>
+				<div class="hero-actions">
+					<a href="#projects" class="cta primary">Browse Projects</a>
+					<a href="#videos" class="cta secondary">Watch Resume Reels</a>
+				</div>
 			</div>
-		</div>
-		<p class="footer-meta">© <span id="copyright-year"></span> Scott Deutsch · Crafted with the help of AI.</p>
-	</footer>
-</body>
+		</section>
+
+		<main>
+			<section class="content-section" id="videos-section">
+				<header class="section-header">
+					<h2>Resume Video Capsules</h2>
+					<p>
+						Quick-hit career reels blending storytelling with in-headset
+						capture.
+					</p>
+				</header>
+				<div class="card-grid" id="videos"></div>
+			</section>
+
+			<section class="content-section" id="projects-section">
+				<header class="section-header">
+					<h2>Interactive Project Atlas</h2>
+					<p>
+						Filter across AI, blockchain, and experimental builds to find your
+						next spark.
+					</p>
+				</header>
+				<div class="filter-bar" role="group" aria-label="Project filters">
+					<div class="filter-search">
+						<label for="project-search" class="sr-only">Search projects</label>
+						<input
+							type="search"
+							id="project-search"
+							placeholder="Search by name or description"
+							autocomplete="off" />
+					</div>
+					<div class="filter-chips" id="filter-chips">
+						<button class="filter-chip active" data-filter="all" type="button">
+							All
+						</button>
+					</div>
+				</div>
+				<div class="card-grid" id="projects"></div>
+			</section>
+
+			<section class="content-section" id="non-gh-section">
+				<header class="section-header">
+					<h2>Extended Reality Labs</h2>
+					<p>
+						Selected client and concept work hosted beyond GitHub, ready for
+						deep dives.
+					</p>
+				</header>
+				<div class="card-grid" id="non-gh-projects"></div>
+			</section>
+			<section class="dfl-showcase" id="dfl-section">
+				<div class="dfl-inner">
+					<div class="dfl-visual">
+						<img
+							src="https://digitalfuturelabs.com/assets/dfl-logo-DbBhGVx_.png"
+							alt="Digital Future Labs Logo"
+							class="dfl-logo" />
+					</div>
+					<div class="dfl-content">
+						<h2>See more projects at my company profile</h2>
+						<a
+							href="https://digitalfuturelabs.com"
+							target="_blank"
+							class="cta primary dfl-cta">
+							Visit Digital Future Labs
+							<i
+								class="fas fa-external-link-alt"
+								style="margin-left: 8px; font-size: 0.8em"></i>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<section id="more-projects" class="callout">
+			<h2>Explore more experiments</h2>
+			<p>Follow the full stream of personal builds, prototypes, and repos.</p>
+			<a
+				href="https://github.com/surgery18?tab=repositories"
+				target="_blank"
+				class="github-button"
+				>Visit GitHub</a
+			>
+		</section>
+
+		<footer id="connect">
+			<div class="footer-inner">
+				<p>Send me a friend request on any of these worlds.</p>
+				<div id="socials" aria-label="Social media">
+					<a
+						href="https://github.com/surgery18"
+						target="_blank"
+						title="GitHub: surgery18"
+						><i class="fab fa-github"></i
+					></a>
+					<a
+						href="https://twitter.com/TheVRNerd"
+						target="_blank"
+						title="X: @TheVRNerd"
+						><svg
+							class="icon-x"
+							aria-hidden="true"
+							viewBox="0 0 24 24"
+							width="20"
+							height="20">
+							<path
+								fill="currentColor"
+								d="M3 3h4.6l4.35 6.42L16.88 3H21l-7.58 9.7L21 21h-4.6l-4.5-6.63L7.12 21H3l7.63-9.83L3 3z" /></svg
+						><span class="sr-only">X</span></a
+					>
+					<a
+						href="https://www.tiktok.com/@sdeutsch18"
+						target="_blank"
+						title="TikTok: @sdeutsch18"
+						><i class="fab fa-tiktok"></i
+					></a>
+					<a
+						href="https://www.linkedin.com/in/sdeutsch"
+						target="_blank"
+						title="LinkedIn: sdeutsch"
+						><i class="fab fa-linkedin"></i
+					></a>
+					<a
+						href="https://www.instagram.com/sdeutsch18"
+						target="_blank"
+						title="Instagram: sdeutsch18"
+						><i class="fab fa-instagram"></i
+					></a>
+				</div>
+			</div>
+			<p class="footer-meta">
+				© <span id="copyright-year"></span> Scott Deutsch · Crafted with the
+				help of AI.
+			</p>
+		</footer>
+	</body>
 </html>
